@@ -1,0 +1,92 @@
+/* Reset básico e estilos globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f8f9fa;
+    padding: 20px;
+}
+
+/* Container principal */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Título da página */
+.page-title {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #2c3e50;
+    font-size: 2.2rem;
+    font-weight: 600;
+}
+
+/* Container do menu - Flexbox principal */
+.menu-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Estilos para os itens de resumo */
+.summary-item {
+    flex: 1 0 100%;
+    background-color: #3498db;
+    color: white;
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 1.4rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.summary-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Estilos para os cards */
+.card-item {
+    flex: 1 0 calc(33.333% - 14px);
+    background-color: #2ecc71;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.card-item:hover {
+    background-color: #27ae60;
+    transform: scale(1.02);
+}
+
+/* Responsividade */
+@media (max-width: 992px) {
+    .card-item {
+        flex: 1 0 calc(50% - 10px);
+    }
+}
+
+@media (max-width: 576px) {
+    .card-item {
+        flex: 1 0 100%;
+    }
+    
+    .summary-item, .card-item {
+        padding: 20px;
+    }
+    
+    .page-title {
+        font-size: 1.8rem;
+    }
+}
